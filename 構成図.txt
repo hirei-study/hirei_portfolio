@@ -1,0 +1,10 @@
+使用するもの
+docker、docker-compose
+react:
+    typescript
+    hooks
+css:
+    material-ui
+
+eslint
+prettier

@@ -1,0 +1,15 @@
+# テンプレート(基本はこの形)
+# versionとservicesは必ず記載する必要がある
+version: "3.9"
+services:
+  # front:コンテナの名前(自由につけれる)
+  front:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    # 前のfrontはコンテナの名前。後ろのfrontはエディター内にあるディレクトリの名前
+    volumes:
+      - ./front:/front
+    working_dir: /front
+    command: node
+    tty: true
